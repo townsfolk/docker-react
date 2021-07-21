@@ -7,6 +7,5 @@ before_install:
   - docker build -t townsfolk/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run townsfolk/docker-react yarn test -- --coverage
-#script:
-#  - docker run -e CI=true USERNAME/docker-react npm run test
+  #  - docker run townsfolk/docker-react yarn test -- --coverage
+  - docker run -e CI=true townsfolk/docker-react npm run test
